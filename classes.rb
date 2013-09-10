@@ -13,6 +13,10 @@ class Rainbow
   @@rainbowness = 3
   puts $globalness
 
+  def self.rainbowness
+    puts @@rainbowness
+  end
+
   def initialize(color)
     @color_of_rainbow = color
     puts @color_of_rainbow
@@ -33,6 +37,11 @@ class Rainbow
 end
 
 class BigRainbow < Rainbow
+
+  # This will affect sub and super classes too
+  @@rainbowness = 27
+  
+
   def be_awesome
     super
     puts "it overrides it"
@@ -43,3 +52,7 @@ rainbow = Rainbow.new("blue")
 
 #Notice how we don't have an init method but we still have to pass it stuff.
 big_rainbow = BigRainbow.new("green")
+
+# It affects everything!
+print Rainbow.rainbowness.to_s
+print BigRainbow.rainbowness.to_s

@@ -1,8 +1,10 @@
 # Ruby!
 
+Use the command ``` irb ``` for testing ruby out!
+
 ## Basics
 
-Look at the rb files!
+Look at the ```.rb``` files!
 
 ## Styling!
 
