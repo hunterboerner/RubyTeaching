@@ -5,10 +5,18 @@ module Hello
   def hi
     puts "hi"
   end
+
+  def greet
+    puts "Hi person"
+  end
 end
 
 module Welcome
   puts "welcome"
+
+  def greet
+    puts "Welcome mr/ms/mrs person thingy"
+  end
 end
 
 # Module greeting which has Welcome and Hello in it
@@ -30,6 +38,10 @@ class Greeting
 
   def initialize
     hi
+
+    # Notice how we had two methods called greet. However the one that was
+    # Called was the one whose module was included last.  
+    greet
   end
 end
 
